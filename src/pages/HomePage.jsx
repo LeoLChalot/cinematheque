@@ -17,7 +17,7 @@ export default function HomePage() {
 
     const fetchPopularFilms = async () => {
         setLoading(true)
-        await fetch(`${api.url}/popular?language=fr-FR`, {
+        await fetch(`${api.url}/movie/popular?language=fr-FR`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',

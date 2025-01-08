@@ -360,5 +360,40 @@ nav h1:first-child {
 
 .film-resume{
   text-align: justify;
-
 }
+
+.comment-section {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.comment-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #000;
+  resize: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
