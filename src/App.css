@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +7,319 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body::-webkit-scrollbar {
+  display: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes neonRougeAnimation {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px #c40044,
+      0 0 10px #c40044,
+      0 0 20px #c40044,
+      0 0 40px #c40044,
+      0 0 80px #c40044,
+      0 0 90px #c40044,
+      0 0 100px #c40044,
+      0 0 150px #c40044;
   }
-  to {
-    transform: rotate(360deg);
+
+  25%,
+  75% {
+    text-shadow:
+      0 0 2px #c40044,
+      0 0 5px #c40044,
+      0 0 10px #c40044,
+      0 0 20px #c40044,
+      0 0 40px #c40044,
+      0 0 50px #c40044,
+      0 0 60px #c40044,
+      0 0 100px #c40044;
+  }
+
+  50% {
+    text-shadow:
+      0 0 1px #c40044,
+      0 0 2px #c40044,
+      0 0 5px #c40044,
+      0 0 10px #c40044,
+      0 0 20px #c40044,
+      0 0 30px #c40044,
+      0 0 40px #c40044,
+      0 0 50px #c40044;
+  }
+}
+@keyframes neonVertAnimation {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px #00c000,
+      0 0 10px #00c000,
+      0 0 20px #00c000,
+      0 0 40px #00c000,
+      0 0 80px #00c000,
+      0 0 90px #00c000,
+      0 0 100px #00c000,
+      0 0 150px #00c000;
+  }
+
+  25%,
+  75% {
+    text-shadow:
+      0 0 2px #00c000,
+      0 0 5px #00c000,
+      0 0 10px #00c000,
+      0 0 20px #00c000,
+      0 0 40px #00c000,
+      0 0 50px #00c000,
+      0 0 60px #00c000,
+      0 0 100px #00c000;
+  }
+
+  50% {
+    text-shadow:
+      0 0 1px #00c000,
+      0 0 2px #00c000,
+      0 0 5px #00c000,
+      0 0 10px #00c000,
+      0 0 20px #00c000,
+      0 0 30px #00c000,
+      0 0 40px #00c000,
+      0 0 50px #00c000;
+  }
+}
+@keyframes neonBleuAnimation {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px #006cf8,
+      0 0 10px #006cf8,
+      0 0 20px #006cf8,
+      0 0 40px #006cf8,
+      0 0 80px #006cf8,
+      0 0 90px #006cf8,
+      0 0 100px #006cf8,
+      0 0 150px #006cf8;
+  }
+
+  25%,
+  75% {
+    text-shadow:
+      0 0 2px #006cf8,
+      0 0 5px #006cf8,
+      0 0 10px #006cf8,
+      0 0 20px #006cf8,
+      0 0 40px #006cf8,
+      0 0 50px #006cf8,
+      0 0 60px #006cf8,
+      0 0 100px #006cf8;
+  }
+
+  50% {
+    text-shadow:
+      0 0 1px #006cf8,
+      0 0 2px #006cf8,
+      0 0 5px #006cf8,
+      0 0 10px #006cf8,
+      0 0 20px #006cf8,
+      0 0 30px #006cf8,
+      0 0 40px #006cf8,
+      0 0 50px #006cf8;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ==================================== */
+/* Style Body */
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url('https://raw.githubusercontent.com/claudz1/CodepenImages/master/plank.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.card {
-  padding: 2em;
+/* Style Navbar */
+nav {
+  padding: 10px 0;
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .navbar-link{
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+nav .navbar-brand {
+  font-size: 2rem;
+  font-weight: 900;
+}
+nav h1:first-child {
+  margin-right: auto;
 }
 
-.read-the-docs {
-  color: #888;
+
+/* Style Neon */
+.neon{
+  margin: 0;
+  padding: 0 20px;
+  color: #fff;
+}
+.neon::before, .neon::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  filter: blur(15px);
+}
+.neon:after {
+  filter: blur(15px);
+}
+.neon:before {
+  filter: blur(40px);
+}
+.neon-rouge {
+  text-shadow: 0 0 20px #ff005b;
+  animation: neonRougeAnimation 2s infinite alternate;
+}
+.neon-rouge::after {
+  color: #ff005b;
+}
+.neon-rouge::before {
+  color: #ff005b;
+}
+.neon-vert {
+  text-shadow: 0 0 20px #00c000;
+  animation: neonVertAnimation 2s infinite alternate;
+}
+.neon-vert::after {
+  color: #00c000;
+}
+.neon-vert::before {
+  color: #00c000;
+}
+.neon-bleu {
+
+  text-shadow: 0 0 20px #006cf8;
+  animation: neonBleuAnimation 2s infinite alternate;
+}
+.neon-vert::after {
+  color: #006cf8;
+}
+.neon-vert::before {
+  color: #006cf8;
+}
+
+
+/* Style Erreurs */
+.erreur-404 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.erreur-404 h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  text-shadow: 0 0 20px #ff005b;
+  animation: neonRougeAnimation 2s infinite alternate;
+}
+
+.erreur-404 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.erreur-404 a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.erreur-404 a:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+/* Style Loader */
+.loading-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+  animation: neonRougeAnimation 2s infinite alternate;
+}
+
+/* Film Card */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.film-card {
+  z-index: 1;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  filter: brightness(0.5);
+  transition: 0.2s;
+}
+
+.film-card:hover {
+  filter: brightness(1);
+}
+
+.film-link {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.film-card img {
+  width: 100%;
+}
+
+.film-card-info {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 5px 5px;
+}
+
+.film-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 10px;
 }
