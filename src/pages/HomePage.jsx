@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useApi } from '../hooks/ApiContext';
-import FilmCard from '../components/FilmCard';
+import FilmCard from '../components/film/FilmCard';
 import ItemContainer from '../components/layouts/ItemsContainer';
 import NeonTitle from '../components/layouts/NeonTitle';
+import { useLocation } from 'react-router-dom';
+import { useApp } from '../hooks/AppContext';
 
 
 
@@ -15,7 +17,7 @@ export default function HomePage() {
 
     const fetchPopularFilms = async () => {
         setLoading(true)
-        await fetch(`${api.url}/popular`, {
+        await fetch(`${api.url}/popular?language=fr-FR`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',

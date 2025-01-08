@@ -301,7 +301,7 @@ nav h1:first-child {
   filter: brightness(1);
 }
 
-.film-link {
+.film-card-link {
   width: 100%;
   display: block;
   text-decoration: none;
@@ -317,9 +317,48 @@ nav h1:first-child {
   border-radius: 0 0 5px 5px;
 }
 
-.film-title {
+.film-card-title {
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
   padding: 10px;
+}
+
+/* Style Film Details */
+
+.film{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.film-backdrop {
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.film-backdrop img {
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.film-categories {
+  text-align: center;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+
+.film-resume{
+  text-align: justify;
+
 }
